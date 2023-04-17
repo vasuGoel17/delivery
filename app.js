@@ -1,7 +1,6 @@
 // const bodyParser = require("body-parser");
-const dotenv = require("dotenv");
-dotenv.config();
 const express = require("express");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const router = require("./routes/router");
 const cookieParser = require("cookie-parser");
