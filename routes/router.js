@@ -7,8 +7,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const authenticate = require("../middleware/authenticate");
 
-const keysecret = "kuchbhikuchbhikuchbhikuchbhikuch";
-
 router.post("/api/register", async (req, res) => {
   const { username, password, confirmPassword, number } = req.body;
   console.log(username, password, number, confirmPassword);

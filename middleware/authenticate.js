@@ -1,13 +1,12 @@
 const jwt = require("jsonwebtoken");
 const signups = require("../models/signupschema");
-const keysecret = "kuchbhikuchbhikuchbhikuchbhikuch";
 
 const authenticate = async (req, res, next) => {
   try {
     const token = req.headers.authorization;
     console.log("this is token");
     console.log(token);
-    const verifytoken = jwt.verify(token, keysecret);
+    const verifytoken = jwt.verify(token, process.env.KEYSECRET);
     // console.log(verifytoken);
     const rootuser = await signups.find({ _id: verifytoken._id });
     // console.log(rootuser);
