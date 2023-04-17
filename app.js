@@ -8,7 +8,9 @@ const cors = require("cors");
 const PORT = process.env.PORT || 5000;
 
 require("./db/conn");
-// const signups = require("./models/signUpSchema");
+const signups = require("./models/signupschema");
+const travels = require("./models/travelschema");
+const deliverys = require("./models/deliveryschema");
 const app = express();
 // app.set("view-engine", "ejs");
 app.use(express.json());
